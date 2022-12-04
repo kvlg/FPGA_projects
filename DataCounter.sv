@@ -22,7 +22,7 @@ generate
  
  begin: signed_counter
 
-  if (Code == "Str")      // STRAIGHT CODE
+  if (Code == "Str")      // STRAIGHT BINARY CODE
   begin
   
   if (~Reset) begin Data <= 0; end
@@ -49,7 +49,7 @@ generate
   
   end
   
-  else if (Code == "Inv")   // INVERTED CODE
+  else if (Code == "Inv")   // ONE'S COMPLEMENT CODE
   begin
   
   if (~Reset) begin Data <= 0; end
@@ -76,7 +76,7 @@ generate
   
   end
 
-  else                        // AUGMENTED CODE
+  else                        // TWO'S COMPLEMENT CODE
   begin
   
   if (~Reset) begin Data <= 0; end
